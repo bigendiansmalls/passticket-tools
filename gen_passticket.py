@@ -17,6 +17,9 @@ import argparse
 #    https://www.ibm.com/support/knowledgecenter/en/                           #
 #        SSLTBW_2.1.0/com.ibm.zos.v2r1.icha300/skalgo.htm#skalgo               #
 #                                                                              #
+#    https://www.ibm.com/support/knowledgecenter/en/                           #
+#        SSLTBW_2.1.0/com.ibm.zos.v2r1.icha300/algor.htm#algor                 #
+#                                                                              #
 #  This program will generate RACF passtickets for authentication to           #
 #       z/os.                                                                  #
 #                                                                              #
@@ -56,7 +59,6 @@ def mainprog(u, a, s):
 	##
 	# Result 2
 	##
-
 	c = DES.new(sec, DES.MODE_ECB)
 	ct = c.encrypt(r2a)
 	r2 = ct
@@ -138,9 +140,8 @@ def mainprog(u, a, s):
 	# print("Result 5: {0:s}".format(r5.encode('hex').upper()))
 
 	##
-	# Step 6
+	# Result 6
 	##
-
 	r5b = "".join(["{0:08b}".format(ord(x)) for x in (r5)])
 
 	tt = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R',
