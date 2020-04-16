@@ -79,7 +79,7 @@ def whine(text, kind='clear', level=0):
   if level == 1: lvldisp = "\t"
   elif level == 2: lvldisp = "\t\t"
   elif level == 3: lvldisp = "\t\t\t"
-  print color+lvldisp+typdisp+text+ (bcolors.ENDC if color!="" else "")
+  print(color+lvldisp+typdisp+text+ (bcolors.ENDC if color!="" else ""))
 
 ################################################################################
 #  Lookup tables - thanks to AV for the assist!                                #
